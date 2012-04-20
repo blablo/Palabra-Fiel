@@ -1,0 +1,12 @@
+development:
+  bucket: palabra-fiel-dev
+  access_key_id: AKIAIUJHZ2SOVH6P4G5A
+  secret_access_key: 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
+production:
+  bucket: palabra-fiel-pro
+  access_key_id: AKIAIUJHZ2SOVH6P4G5A
+  secret_access_key: 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
+staging:
+  bucket: palabra-fiel-staging
+  access_key_id: AKIAIUJHZ2SOVH6P4G5A
+  secret_access_key: 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

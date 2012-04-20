@@ -1,0 +1,12 @@
+-form_for @estudio do |f|
+  =f.label :nombre
+  =f.text_field :nombre
+  %br
+  =f.label :fecha
+  =f.date_select :fecha
+  %br
+  =f.label :audio
+  =f.file_field :audio
+  
+  %br
+  =f.submit :Guardar
