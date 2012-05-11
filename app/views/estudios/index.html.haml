@@ -1,0 +1,17 @@
+%table{:style => "text-align: left"}
+  %tr
+    %th{:width => "300px", :style => "text-align: left"} Nombre
+    %th{:width => "100px"} Fecha
+    %th Audio
+
+  -@estudios.each do |estudio|
+    %tr
+      %td=estudio.nombre
+      %td=estudio.fecha
+      %td
+        %object#dewplayer{:data => "dewplayer-mini.swf", :height => "20", :name => "dewplayer", :type => "application/x-shockwave-flash", :width => "160"}
+          %param{:name => "wmode", :value => "transparent"}/
+          %param{:name => "movie", :value => "dewplayer-mini.swf"}/
+          %param{:name => "flashvars", :value => "mp3=#{estudio.audio_url}"}/
+
+        =link_to("Descargar", estudio.audio_url)

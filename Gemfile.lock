@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/nathancolgate/s3-swf-upload-plugin
+  revision: 76f36fa49f60cf5ac33aa0959c4a33cbc3ee0290
+  specs:
+    s3_swf_upload (0.3.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -29,10 +35,6 @@ GEM
       activesupport (= 3.0.10)
     activesupport (3.0.10)
     arel (2.0.10)
-    aws-s3 (0.6.2)
-      builder
-      mime-types
-      xml-simple
     builder (2.1.2)
     cocaine (0.2.1)
     erubis (2.6.6)
@@ -47,7 +49,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.18)
     mysql2 (0.2.18)
-    paperclip (2.4.0)
+    paperclip (2.7.0)
       activerecord (>= 2.3.0)
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
@@ -81,15 +83,14 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.33)
-    xml-simple (1.1.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-s3
   haml
   mysql2 (~> 0.2.11)
-  paperclip (= 2.4)
+  paperclip (= 2.7)
   rails (= 3.0.10)
+  s3_swf_upload!
   sass

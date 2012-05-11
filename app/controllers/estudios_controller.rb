@@ -1,4 +1,8 @@
 class EstudiosController < ApplicationController
+  def index
+    @estudios = Estudio.all
+  end
+
   def show
     @estudio = Estudio.find(params[:id])
   end

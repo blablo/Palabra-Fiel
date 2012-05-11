@@ -3,8 +3,9 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.10'
 gem 'haml'
 gem 'sass'
-gem "paperclip", "2.4"
-gem 'aws-s3', :require => 'aws/s3'
+gem "paperclip", "2.7"
+
+gem 's3_swf_upload', :git => 'git://github.com/nathancolgate/s3-swf-upload-plugin'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

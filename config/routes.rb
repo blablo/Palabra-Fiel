@@ -1,5 +1,7 @@
 PalabraFiel::Application.routes.draw do
  
+  resources :s3_uploads
+
   resources :estudios
  # The priority is based upon order of creation:
   # first created -> highest priority.

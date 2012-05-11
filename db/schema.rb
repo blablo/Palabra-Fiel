@@ -15,10 +15,7 @@ ActiveRecord::Schema.define(:version => 20120420225459) do
   create_table "estudios", :force => true do |t|
     t.string   "nombre"
     t.date     "fecha"
-    t.string   "audio_file_name"
-    t.string   "audio_content_type"
-    t.integer  "audio_file_size"
-    t.datetime "audio_updated_at"
+    t.string   "audio_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
