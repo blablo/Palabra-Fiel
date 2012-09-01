@@ -1,6 +1,14 @@
+require 'net/http'
+
+
+
 class EstudiosController < ApplicationController
   def index
     @estudios = Estudio.all
+    respond_to do |format|
+      format.html
+      format.xml
+    end
   end
 
   def show
@@ -20,7 +28,7 @@ class EstudiosController < ApplicationController
 
     respond_to do |format|
       if @estudio.save
-        format.html { redirect_to(@estudio, :notice => 'Estudio was successfully created.') }
+        format.html { redirect_to(estudios_url, :notice => 'Estudio was successfully created.') }
         format.xml  { render :xml => @estudio, :status => :created, :location => @estudio }
       else
         format.html { render :action => "new" }
@@ -28,12 +36,13 @@ class EstudiosController < ApplicationController
       end
     end
   end
+
   def update
     @estudio = Estudio.find(params[:id])
 
     respond_to do |format|
       if @estudio.update_attributes(params[:estudio])
-        format.html { redirect_to(@estudio, :notice => 'Estudio was successfully created.') }
+        format.html { redirect_to(estudios_url, :notice => 'Estudio was successfully created.') }
         format.xml  { render :xml => @estudio, :status => :created, :location => @estudio }
       else
         format.html { render :action => "new" }
