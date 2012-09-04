@@ -25,6 +25,7 @@ xml.rss("version" => "2.0", "xmlns:itunes" => "http://www.itunes.com/dtds/podcas
         xml.title estudio.album.blank? ? estudio.nombre : estudio.album + " - " + estudio.nombre
         xml.itunes :author, "Palabra Fiel"
         xml.itunes :summery, estudio.sintesis
+        xml.itunes :subtitle, estudio.sintesis
         xml.itunes :image, "http://palabrafiel.com.mx/images/palabra_fiel.jpg"
         
         xml.enclosure :url => estudio.audio_url, :type => "audio/mpeg", :length => estudio.file_size
